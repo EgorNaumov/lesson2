@@ -2,8 +2,11 @@
 Console.WriteLine("Угадай число 1-10");
 int a;
 int b;
+bool win=false;
 Random rnd = new Random();
-b = rnd.Next(1,1);
+b = rnd.Next(1,10);
+while (win==false)
+{
 a = int.Parse(Console.ReadLine());
 if (b>a)
 {
@@ -15,5 +18,7 @@ if (b<a)
 }
 if (b==a)
 {
+  win = true;
   Console.WriteLine("Победа");
+}
 }
